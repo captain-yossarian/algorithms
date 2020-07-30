@@ -1,9 +1,9 @@
 mod union_find;
 
-use union_find::UnionFind;
+use union_find::UnionFindWages;
 
 fn main() {
-    let mut data = UnionFind::new(10);
+    let mut data = UnionFindWages::new(10);
     println!("BEFORE {:?}", data);
 
     data.union(4, 3);
