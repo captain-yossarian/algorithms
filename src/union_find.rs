@@ -86,9 +86,9 @@ impl UnionFindWages {
         if p_root != q_root {
             if self.sz[p_root] < self.sz[q_root] {
                 self.id[p_root] = q_root;
+                println!("!");
                 self.sz[q_root] += self.sz[p_root]
-            }
-            {
+            } else {
                 self.id[q_root] = p_root;
                 self.sz[p_root] += self.sz[q_root]
             }
