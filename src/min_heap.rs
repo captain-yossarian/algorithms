@@ -62,7 +62,6 @@ impl MinHeap {
 
     pub fn poll(&mut self) -> Option<&Value> {
         if let Some(first_item) = self.items.get_mut(0) {
-            let length = self.items.len();
 
             if let Some(last_item) = self.items.pop() {
                 *first_item = last_item;
@@ -99,3 +98,4 @@ impl MinHeap {
         }
     }
 }
+///https://www.youtube.com/watch?v=t0Cq6tVNRBA
