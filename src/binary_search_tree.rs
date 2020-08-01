@@ -16,9 +16,10 @@ impl<T: Ord + Clone> Node<T> {
         }
     }
 
-    pub fn wrap(value: T) -> Leaf<T> {
+    fn wrap(value: T) -> Leaf<T> {
         Some(Box::new(Node::new(value)))
     }
+
     pub fn add(&mut self, value: T) {
         if value > self.value {
             match self.left {

@@ -1,18 +1,14 @@
-mod binary_tree;
+mod binary_search_tree;
+mod min_heap;
 mod union_find;
 
-use binary_tree::Node;
+use binary_search_tree::Node;
+use min_heap::MinHeap;
 use union_find::UnionFindWages;
 
 fn main() {
     let mut data = UnionFindWages::new(10);
-    let mut root: Node<u8> = Node::new(5);
-
-    root.add(10);
-    root.add(2);
-    root.add(1);
-    root.add(7);
-    root.add(6);
-    root.add(11);
-    println!("Tree {:?}", root.find(8));
+    let mut root: Node<u8> = Node::new(26);
+    let min_heap = MinHeap::new(10);
+    println!("Tree {:?}", min_heap.has_parent(1));
 }
